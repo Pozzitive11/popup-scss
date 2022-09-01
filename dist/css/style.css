@@ -1,0 +1,346 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+q:before {
+  content: "";
+  content: none;
+}
+blockquote:after,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.popup {
+  position: relative;
+  overflow: auto;
+  display: none;
+  position: absolute;
+  padding: 15px;
+  right: 20%;
+  top: 20%;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+  border-radius: 5px;
+  max-width: 495px;
+  height: 370px;
+}
+.popup__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.popup__item {
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.popup__item img {
+  padding: 4px;
+}
+.popup__item:hover {
+  background-color: gray;
+}
+.popup__text {
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+.popup__btn {
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.popup__btn:hover {
+  background-color: green;
+}
+
+.popup-more {
+  border-radius: 15px;
+  display: none;
+}
+.popup-more__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.popup-more__btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  width: 80px;
+  margin: 0 auto;
+}
+.popup-more__btn:hover {
+  color: green;
+}
+
+.popup::-webkit-scrollbar {
+  width: 12px;
+}
+
+.popup::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background-color: #aab74d;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.3) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, 0.3) 80%);
+  border-radius: 10px;
+}
+
+body {
+  color: #1f1e1e;
+  font-family: "Indie Flower", cursive;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  padding: 40px 0;
+}
+.nav__list {
+  display: flex;
+  justify-content: end;
+}
+.nav__item {
+  font-size: 40px;
+}
+.nav__item:not(:last-child) {
+  margin-right: 40px;
+}
+.nav__link {
+  position: relative;
+  padding: 0 5px;
+  transition: all 0.3s ease-in-out;
+}
+.nav__link:hover {
+  color: green;
+}
+
+.popup__input,
+.popup-more__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.popup__input:focus ~ .popup__btn {
+  outline: 2px solid #000;
+}
+
+.popup-more__input:focus ~ .popup-more__btn {
+  outline: 2px solid #000;
+  border-radius: 5px;
+}
+
+.popup__input:checked ~ .popup {
+  display: block;
+}
+
+.popup-more__input:checked ~ .popup-more {
+  display: block;
+}
+
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */

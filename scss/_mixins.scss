@@ -1,0 +1,41 @@
+@mixin scrollbar {
+  .popup::-webkit-scrollbar {
+    width: 12px;
+  }
+  .popup::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .popup::-webkit-scrollbar-thumb {
+    background-color: #aab74d;
+    background-image: -webkit-linear-gradient(
+      rgba(255, 255, 255, 0.3) 20%,
+      transparent 20%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.3) 40%,
+      rgba(255, 255, 255, 0.3) 60%,
+      transparent 60%,
+      transparent 80%,
+      rgba(255, 255, 255, 0.3) 80%
+    );
+    border-radius: 10px;
+  }
+}
+
+@mixin flex-all-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mr($value) {
+    &:not(:last-child) {
+        margin-right: $value;
+    }
+}

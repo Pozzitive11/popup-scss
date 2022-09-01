@@ -1,0 +1,53 @@
+.popup {
+  position: relative;
+  overflow: auto;
+  display: none;
+  position: absolute;
+  padding: 15px;
+  right: 20%;
+  top: 20%;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+  border-radius: 5px;
+  max-width: 495px;
+  height: 370px;
+
+  &__list {
+    @include flex-all-sb;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    @include flex-all-center;
+    padding: 10px;
+
+    img {
+      padding: 4px;
+    }
+
+    &:hover {
+      background-color: $gray-color;
+    }
+  }
+
+  &__text {
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: $green-color;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "./reset";
+@import "./mixins";
+@import "./variables";
+@import "./popup";
+@import "./popup-more";
+
+@include scrollbar;
+
+body {
+  color: #1f1e1e;
+  font-family: "Indie Flower", cursive;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  padding: 40px 0;
+  &__list {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__item {
+    @include mr(40px);
+    font-size: 40px;
+  }
+
+  &__link {
+    position: relative;
+    padding: 0 5px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: green;
+    }
+  }
+}
+
+.popup__input,
+.popup-more__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.popup__input:focus ~ .popup__btn {
+  outline: $outline;
+}
+
+.popup-more__input:focus ~ .popup-more__btn {
+  outline: $outline;
+  border-radius: 5px;
+}
+
+.popup__input:checked ~ .popup {
+  display: block;
+}
+
+.popup-more__input:checked ~ .popup-more {
+  display: block;
+}
+
+
+.icon{
+  display: block;
+  width: 40px;
+  height: 40px;
+}
